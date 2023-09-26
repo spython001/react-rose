@@ -23,13 +23,13 @@ export default function Topbar() {
         <div className="topRight">
           <ul className="topList">
             <li className="topListItem">
-              <Facebook className='topIcon' />
+              <Facebook className='topIcon topIconF' />
             </li>
             <li className="topListItem">
-              <Instagram className='topIcon' />
+              <Instagram className='topIcon topIconI' />
             </li>
             <li className="topListItem">
-              <Twitter className='topIcon' />
+              <Twitter className='topIcon topIconT' />
             </li>
           </ul>
         </div>
