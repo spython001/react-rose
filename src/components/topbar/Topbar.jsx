@@ -1,5 +1,6 @@
 import './topbar.css'
 import { Facebook, Instagram, Twitter } from '@mui/icons-material'
+import LightDarkButton from '../lightDarkButton/LightDarkButton'
 
 export default function Topbar() {
   return (
@@ -32,6 +33,9 @@ export default function Topbar() {
               <Twitter className='topIcon topIconT' />
             </li>
           </ul>
+          <div className="lightDark">
+            <LightDarkButton />
+          </div>
         </div>
 
     </nav>
