@@ -6,7 +6,8 @@
     top: 0;
     display: flex;
     align-items: center;
-    font-family: 'Euphoria Script', cursive;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 400;
     z-index: 999;
 }
 
@@ -48,6 +49,9 @@
 .topIconT{
     color: #1DA1F2;
 }
+.topIconG{
+    color: white;
+}
   
 
 .topList{
@@ -60,9 +64,9 @@
 
 .topListItem{
     margin-right: 1.5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
-    color: rgba(229, 245, 5, 0.705);
+    color: rgba(240, 243, 193, 0.705);
     transition: background-color 0.3s ease;
 }
 .topListItem:hover{

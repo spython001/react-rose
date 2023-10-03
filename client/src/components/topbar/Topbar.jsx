@@ -33,7 +33,7 @@ export default function Topbar() {
               <Twitter className='topIcon topIconT' />
             </li>
             <li className="topListItem">
-              <GitHub className='topIcon topIconT' />
+              <GitHub className='topIcon topIconG' />
             </li>
           </ul>
           <div className="lightDark">
