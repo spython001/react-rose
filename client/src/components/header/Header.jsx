@@ -2,6 +2,8 @@ import "./header.css"
 
 export default function Header() {
   return (
-    <div>Header</div>
+    <div className="header">
+        <span className="headerLg">/Spython World ...</span>
+    </div>
   )
 }

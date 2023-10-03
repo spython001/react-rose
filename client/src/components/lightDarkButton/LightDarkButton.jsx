@@ -8,7 +8,7 @@ const LightDarkButton = () => {
 
   useEffect(() => {
     // Check the user's preferred theme and set it initially
-    const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const userPrefersDark = window.matchMedia('(prefers-color-scheme: light)').matches; //changed the 'dark' here to 'light' in order to get the dark-blue color at initial instance or state
     setIsDarkMode(userPrefersDark);
   }, []);
 
@@ -24,7 +24,7 @@ const LightDarkButton = () => {
   return (
     <div className="theme-toggle">
       <button onClick={toggleTheme} className={`theme-button ${isDarkMode ? 'dark' : 'light'}`}>
-        {isDarkMode ? <Brightness2 /> : <WbSunny />}
+        {isDarkMode ? <WbSunny /> : <Brightness2 />}
       </button>
     </div>
   );

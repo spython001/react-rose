@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: whitesmoke;
+    font-family: 'Lora', serif;
+    margin-top: 5rem;
+}
+
+.headerLg { 
+    position: absolute;
+
+
+}

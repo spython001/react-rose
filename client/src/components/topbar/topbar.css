@@ -6,7 +6,6 @@
     top: 0;
     display: flex;
     align-items: center;
-    font-family: 'Varela Round', sans-serif;
     font-weight: 400;
     z-index: 999;
 }
@@ -68,6 +67,7 @@
     cursor: pointer;
     color: rgba(240, 243, 193, 0.705);
     transition: background-color 0.3s ease;
+    font-family: 'Varela Round', sans-serif;
 }
 .topListItem:hover{
     color: antiquewhite;
