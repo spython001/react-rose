@@ -6,7 +6,12 @@ export default function Header() {
         <div className="headerTitle">
             <span className="headerTitleLg">/Spython</span>
             <span className="headerTitleSm">world ...</span>
-        </div>    
+        </div>
+        <img 
+          src="/assets/istockphoto-1178183695-612x612.png" 
+          alt="" 
+          className="headerImg" 
+        />   
     </div>
   )
 }
