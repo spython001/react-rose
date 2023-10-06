@@ -1,8 +1,17 @@
 import './topbar.css'
 import { Facebook, Instagram, Twitter, GitHub } from '@mui/icons-material'
 import LightDarkButton from '../lightDarkButton/LightDarkButton'
+import { useContext } from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Context } from '../../context/Context';
 
 export default function Topbar() {
+  const { user, dispatch } = useContext(Context);
+  const PF = "/api/images/"
+
+  const handleLogout = () =>{
+    dispatch({ type:"LOGOUT" });
+  }
   return (
     <nav className="top">
         <div className="topLeft">
@@ -36,8 +45,30 @@ export default function Topbar() {
             <li className="topListItem">
               <GitHub className='topIcon topIconG' />
             </li>
-            <li className="topListItem">LOGIN</li>
-            <li className="topListItem">REGISTER</li>
+            {
+              user ? (
+              <Link to="/settings">
+                <div className='topLeft'><img
+                  className="topImg"
+                  src={PF+user.profilePic} 
+                  alt="" 
+                /></div>
+              </Link>
+              
+              ) : (
+                <ul className="topList">
+                  <li className="topListItem">
+                    <Link className="link" to="/login">LOGIN</Link>
+                  </li>
+                  <li className="topListItem">
+                    <Link className="link" to="/register">REGISTER</Link>
+                  </li>
+                </ul>
+              )
+            }
+            <li className="topListItem" onClick={handleLogout}>
+              { user && "LOGOUT" }
+            </li>
           </ul>
           <div className="lightDark">
             <LightDarkButton />
