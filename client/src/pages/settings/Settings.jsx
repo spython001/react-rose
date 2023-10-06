@@ -1,5 +1,4 @@
 import "./settings.css"
-import Sidebar from "../../components/sidebar/sidebar"
 import { useContext, useState } from "react"
 import { Context } from "../../context/Context"
 import axios from "axios";
@@ -30,11 +29,11 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("http://localhost:5000/api/upload", data);
+        await axios.post("http://localhost:8000/api/upload", data);
       } catch (err) {err}
     }
     try {
-      const res = await axios.put("http://localhost:5000/api/users/"+user._id, updatedUser);
+      const res = await axios.put("http://localhost:8000/api/users/"+user._id, updatedUser);
       setSuccess(true);
       dispatch({ type:"UPDATE_SUCCESS", payload:res.data });
     } catch (err) {
@@ -70,10 +69,9 @@ export default function Settings() {
           <input type="password" onChange={e=>setPassword(e.target.value)}/>
 
           <button className="settingsSubmit" type="submit">Update</button>
-          { success && <span style={{ color:"green", textAlign:"center", margin:"20px" }}>Profile has been updated!</span>}
+          { success && <span style={{ color:"green", textAlign:"center", margin:"1.25rem" }}>Profile has been updated!</span>}
         </form>
       </div>
-      <Sidebar />
     </div>
   )
 }
