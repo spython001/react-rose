@@ -1,11 +1,11 @@
 .post{
     width: 24rem;
-    margin: 0rem 1.5rem 2.5rem;
+    margin: 0rem 1rem 2rem;
 }
 
 .postImg{ 
-    width: 100%;
-    height: 17.5rem;
+    width: 90%;
+    height: 14rem;
     object-fit: cover;
     border-radius: 1rem;
     
@@ -22,6 +22,9 @@
     font-size: 1.5rem;
     margin-top: 1rem;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
 }
 
 .postDate{
@@ -42,5 +45,5 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    width: 95%;
+    width: 90%;
 }

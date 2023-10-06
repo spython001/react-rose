@@ -18,7 +18,8 @@ export default function Topbar() {
             <li className="topListItem">HOME</li>
             <li className="topListItem">ABOUT</li>
             <li className="topListItem">WRITE</li>
-            <li className="topListItem">BLOG POSTS</li>
+            <li className="topListItem">CONTACT</li>
+            
           </ul>
         </div>
         <div className="topRight">
@@ -35,6 +36,8 @@ export default function Topbar() {
             <li className="topListItem">
               <GitHub className='topIcon topIconG' />
             </li>
+            <li className="topListItem">LOGIN</li>
+            <li className="topListItem">REGISTER</li>
           </ul>
           <div className="lightDark">
             <LightDarkButton />
