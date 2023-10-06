@@ -15,7 +15,15 @@ export default function Topbar() {
   return (
     <nav className="top">
         <div className="topLeft">
-            <img src="/assets/spiNav.png" alt="" className="topImg" />
+            {user && (
+              <Link to="/settings">
+                <img
+                  className="topImg"
+                  src={PF+user.profilePic} 
+                  alt="" 
+                />
+              </Link>
+              )}
             <ul className="topList">
               <li className="topListItem">
                 {user && user.username }
