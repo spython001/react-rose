@@ -18,15 +18,19 @@ export default function Topbar() {
             <img src="/assets/spiNav.png" alt="" className="topImg" />
             <ul className="topList">
               <li className="topListItem">
-                Spython dev
+                {user && user.username }
               </li>
             </ul>
         </div>
         <div className="topCenter">
           <ul className="topList">
-            <li className="topListItem">HOME</li>
+            <li className="topListItem">
+              <Link className="link" to="/">HOME</Link>
+            </li>
             <li className="topListItem">ABOUT</li>
-            <li className="topListItem">WRITE</li>
+            <li className="topListItem">
+              <Link className="link" to="/write" >WRITE</Link>
+            </li>
             <li className="topListItem">CONTACT</li>
             
           </ul>
@@ -48,11 +52,11 @@ export default function Topbar() {
             {
               user ? (
               <Link to="/settings">
-                <div className='topLeft'><img
+                <img
                   className="topImg"
                   src={PF+user.profilePic} 
                   alt="" 
-                /></div>
+                />
               </Link>
               
               ) : (
